@@ -28,29 +28,37 @@ class Lista {
         let newNodo= new Nodo(valor)
         if(this.head==null){
             this.head = newNodo
+            this.len++
         }else {
         let current=this.head;
         while(current.next){
             current=current.next;
         }
         current.next= newNodo;
+        this.len++
     }
     }
     remove(){
         if(this.head==null){
             return 1;
         }else{
-
+        this.len--
         let current=this.head;
         while(current.next){
             current= current.next
         }
-        return current.dato 
+        let removido= current.dato  
 
+        let current2=this.head
+        
+        for( let i=1; i<=this.len; i++){
+            current2= current2.next
 
         }
+        current.next= null;
+        return removido 
 
 
     }
 
-}
+}}
